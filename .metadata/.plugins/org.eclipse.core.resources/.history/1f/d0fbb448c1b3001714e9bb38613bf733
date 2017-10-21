@@ -1,0 +1,6 @@
+
+public class MyClass {
+	private String name;
+	private long mobile;
+
+}

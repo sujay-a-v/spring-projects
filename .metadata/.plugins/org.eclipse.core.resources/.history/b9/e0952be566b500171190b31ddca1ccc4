@@ -1,0 +1,15 @@
+package com.bridgelabz.model;
+
+public class CarAutowireAnnotation {
+	
+	private EngineAutoireAnnotation engine;
+	
+	public CarAutowireAnnotation(EngineAutoireAnnotation engine) {
+		this.engine=engine;
+	}
+
+	public void display()
+	{
+		System.out.println("car model : ");
+	}
+}

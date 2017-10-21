@@ -1,0 +1,30 @@
+package com.bridgelabz.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.bridgelabz.model.Student;  
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		//find the xml file
+		/*Resource resource=new ClassPathResource("student.xml");*/
+		 AbstractApplicationContext context = new ClassPathXmlApplicationContext("student.xml");
+		//load the xml file into container
+		/*BeanFactory beanfactory=new XmlBeanFactory(resource); */
+		//create the object of the class
+		Student student=(Student) context.getBean("std");
+		//cast to the Student class
+	//	Student student=(Student)obj;
+		
+		student.display();
+		student.display();
+		student.display();
+		
+		
+
+	}
+
+}

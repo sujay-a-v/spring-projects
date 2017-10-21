@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   
+   <bean id="frnd1" class="com.bridgelabz.model.Friend">
+   		<constructor-arg value="1"/>
+   		<constructor-arg value="Manjunath"/>   
+   </bean>
+   <bean id="frnd2" class="com.bridgelabz.model.Friend">
+   		<constructor-arg value="2"/>
+   		<constructor-arg value="Pradeep"/>   
+   </bean>
+   
+   <bean id="details1" class="com.bridgelabz.model.Details">
+   		<constructor-arg value="9900356542" type="long"/>
+   		<constructor-arg value="manju@gmail.com" type="String"/>
+   </bean>
+   <bean id="details2" class="com.bridgelabz.model.Details">
+   		<constructor-arg value="9591789006" type="long"/>
+   		<constructor-arg value="pradee@gmail.com" type="String"/>
+   </bean>
+   
+   
+   <bean id="myclass" class="com.bridgelabz.model.MyClass">
+   		<constructor-arg value="Sujay"/>
+   		<constructor-arg value="8746021045"/>
+   		<constructor-arg value="suji@gmail.com"/>
+   		<constructor-arg>
+   			<map>
+   				<entry key-ref="frnd1" value-ref="details1"/>
+   				<entry key-ref="frnd2" value-ref="details2"/>
+   			</map>
+   		</constructor-arg>
+   </bean>
+   
+   <!-- Bean Inheritance Example -->
+   <bean id="addr1" class="com.bridgelabz.model.BeanInheritanceAddress">
+   		
+   </bean>
+   
+   </beans>
+   
+   

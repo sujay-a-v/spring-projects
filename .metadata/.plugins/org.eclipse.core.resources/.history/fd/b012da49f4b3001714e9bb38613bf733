@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="drive" class="com.bridgelabz.model.PropertiesDI">
+   		<property name="driver">
+   			<props>
+   				<prop key="driverClass">orcle.jdbc.OrcleDriver</prop>
+   				<prop key="url">orcleurl</prop>
+   				<prop key="user">username</prop>
+   				<prop key="pass">passwod</prop>
+   			</props>
+   		</property>
+   </bean>
+   
+</beans>

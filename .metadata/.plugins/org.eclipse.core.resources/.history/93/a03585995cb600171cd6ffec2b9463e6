@@ -1,0 +1,25 @@
+package com.bridgelabz.model;
+
+public class CarFactory {
+	
+	private String carname;
+	
+	public void setCarname(String carname) {
+		this.carname = carname;
+	}
+
+	public Object getObject()
+	{
+		return null;
+	}
+	
+	public Class getObjectType()
+	{
+		return null;
+	}
+	
+	public boolean isSingleton()
+	{
+		return true;
+	}
+}

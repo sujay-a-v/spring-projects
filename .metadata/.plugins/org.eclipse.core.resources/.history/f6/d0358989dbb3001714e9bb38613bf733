@@ -1,0 +1,9 @@
+package com.bridgelabz.model;
+
+public class A {
+	B b;
+	public A() {
+		System.out.println("object A created");
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.bridgelabz.test;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+import com.bridgelabz.model.Student;  
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		//find the xml file
+		Resource resource=new ClassPathResource("student.xml");
+		//load the xml file into container
+		BeanFactory beanfactory=new XmlBeanFactory(resource); 
+		//create the object of the class
+		Object obj=beanfactory.getBean("student");
+		//cast to the Student class
+		Student student=(Student)obj;
+		
+		student.display();
+		student.display();
+		student.display();
+		
+		
+
+	}
+
+}

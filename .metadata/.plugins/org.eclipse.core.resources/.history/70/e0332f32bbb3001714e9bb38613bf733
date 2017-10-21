@@ -1,0 +1,15 @@
+package com.bridgelabz.model;
+
+import java.util.Map;
+
+public class MapExample {
+
+	private String name;
+	private long mobile;
+	private Map<String,String> friend;
+	
+	public MapExample(String name,long mobile,Map<String,String> friend) {
+		
+	}
+
+}

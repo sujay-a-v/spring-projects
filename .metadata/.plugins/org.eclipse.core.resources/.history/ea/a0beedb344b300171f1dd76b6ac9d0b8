@@ -1,0 +1,18 @@
+package com.bridgelabz.model;
+
+import java.util.List;
+
+public class NonString1 {
+	
+	private int id;
+	private String name;
+	private List<NonString2> nonString2;
+	
+	public NonString1(int id, String name, List<NonString2> nonString2) {
+		this.id=id;
+		this.name=name;;
+		this.nonString2=nonString2;
+		
+	}
+
+}

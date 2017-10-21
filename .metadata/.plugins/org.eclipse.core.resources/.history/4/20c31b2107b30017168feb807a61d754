@@ -1,0 +1,16 @@
+package com.bridgelabz.model;
+
+public class Engine {
+	private String modal;
+
+	public String getModal() {
+		return modal;
+	}
+
+	public void setModal(String modal) {
+		this.modal = modal;
+	}
+	
+	
+
+}

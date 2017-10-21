@@ -1,0 +1,10 @@
+package com.bridgelabz.model;
+
+public class BeanInheritanceAddress {
+	private String addressLine1,city,state,country;
+	
+	public BeanInheritanceAddress(String addressLine1,String city,String state,String country) {
+		
+	}
+
+}

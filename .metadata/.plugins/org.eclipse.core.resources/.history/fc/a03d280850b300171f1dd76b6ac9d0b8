@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="engin" class="com.bridgelabz.model.Engine">
+	   <property name="modalyear">
+	   		<value>2015</value>
+	   </property>
+   </bean>
+   
+   <bean id="car" class="com.bridgelabz.model.Car">
+   		<property name="carName" value="Audi"></property>
+   		<property name="engine" ref="engin"></property>
+   </bean>
+   
+   
+   <bean id="car1" class="com.bridgelabz.model.Car">
+   		<property name="carName" value="Audi"></property>
+   		
+   		<property name="engine">
+   			<bean id="engin1" class="com.bridgelabz.model.Engine">
+   				<property name="modalyear">
+   					<value>2015</value>
+   				</property>
+   			</bean>
+   		</property>
+   </bean>
+   
+  <!--  List example -->
+  <bean id="listdata" class="com.bridgelabz.model.ListData">
+  	<constructor-arg value="123"/>
+  	<constructor-arg value="Suji"/>
+  	<constructor-arg>
+  		<list>
+  			<value>Playing Cricket</value>
+  			<value>Reading books</value>
+  			<value>Watching movies...</value>
+  		</list>
+  	</constructor-arg>
+  </bean>
+  
+  <!-- Non String List -->
+  <bean id="non1" name="abc" class="com.bridgelabz.model.NonString2">
+  		<constructor-arg value="1"/>
+  		<constructor-arg value="Manjunath"/>
+  		<constructor-arg value="9900356542"/>
+  </bean>
+  <bean id="non2" name="xyz" class="com.bridgelabz.model.NonString2">
+  		<constructor-arg value="2"/>
+  		<constructor-arg value="Bhushan"/>
+  		<constructor-arg value="9632121087"/>
+  </bean>
+  
+  <bean id="frnd" class="com.bridgelabz.model.NonString1">
+  	<constructor-arg value="55"/>
+  	<constructor-arg value="Sujay"/>
+  	<constructor-arg >
+  		<list>
+  			<ref bean="non1"/>
+  			<ref bean="non2"/>
+  		</list>
+  	</constructor-arg>
+  </bean>
+ 
+</beans>

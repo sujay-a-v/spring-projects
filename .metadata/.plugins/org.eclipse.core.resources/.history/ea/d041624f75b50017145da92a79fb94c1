@@ -1,0 +1,18 @@
+package com.bridgelabz.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class CarAutowireAnnotation {
+	
+	@Autowired
+	@Qualifier(value="e2")
+	private EngineAutoireAnnotation engine;
+	
+	//no need to have any setter and constructor  
+
+	public void display()
+	{
+		System.out.println("car model : "+engine.getModel());
+	}
+}

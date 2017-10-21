@@ -1,0 +1,14 @@
+package com.bridgelabz.model;
+
+
+public class EngineAutoireAnnotation {
+	
+	private String model;
+	
+	public void printData()
+	
+	{
+		System.out.println("model "+model);
+	}
+
+}

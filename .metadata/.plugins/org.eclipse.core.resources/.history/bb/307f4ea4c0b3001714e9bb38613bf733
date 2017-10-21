@@ -1,0 +1,15 @@
+package com.bridgelabz.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.bridgelabz.model.NonPrimetive1;
+
+public class NonPrimetiveTest {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("secondaryData.xml");
+		NonPrimetive1 nonString= (NonPrimetive1) context.getBean("frnd");
+		nonString.display();
+	}
+}

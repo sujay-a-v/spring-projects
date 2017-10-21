@@ -1,0 +1,22 @@
+package com.bridgelabz.model;
+
+import java.util.Map;
+
+public class MapExample {
+
+	private String name;
+	private long mobile;
+	private Map<String,String> friend;
+	
+	public MapExample(String name,long mobile,Map<String,String> friend) {
+		this.name=name;
+		this.mobile=mobile;
+		this.friend=friend;
+	}
+	
+	public void display()
+	{
+		System.out.println(name+" \n"+mobile+" \nMyFriends are");
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.bridgelabz.model;
+
+public class ConstructorOrg {
+	
+	private int age;
+	private String name;
+	
+	public ConstructorOrg(int age,String name)
+	{
+		this.age=age;
+		this.name=name;
+	}
+
+}

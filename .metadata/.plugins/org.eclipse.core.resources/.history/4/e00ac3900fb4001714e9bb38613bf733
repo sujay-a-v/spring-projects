@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+   
+   <!-- <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="none">
+   		no need to call any primitive types 
+      </bean> -->
+      
+      <!-- <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="simple">
+   		no need to call the required primitive types 
+   		<property name="carname" value="Audi"></property>
+   		
+      </bean> -->
+      
+      <bean id="e" class="com.bridgelabz.model.EngineDependencyCheck"  >
+      
+      </bean>
+      <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="objects">
+   		<!-- no need to call the required secondary  types  -->
+   		<property name="engine" ref="e"></property>
+   		
+      </bean>
+   
+</beans>   

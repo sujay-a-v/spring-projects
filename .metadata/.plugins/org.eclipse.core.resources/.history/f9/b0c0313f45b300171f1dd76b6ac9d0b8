@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="engin" class="com.bridgelabz.model.Engine">
+	   <property name="modalyear">
+	   		<value>2015</value>
+	   </property>
+   </bean>
+   
+   <bean id="car" class="com.bridgelabz.model.Car">
+   		<property name="carName" value="Audi"></property>
+   		<property name="engine" ref="engin"></property>
+   </bean>
+   
+   
+   <bean id="car1" class="com.bridgelabz.model.Car">
+   		<property name="carName" value="Audi"></property>
+   		
+   		<property name="engine">
+   			<bean id="engin1" class="com.bridgelabz.model.Engine">
+   				<property name="modalyear">
+   					<value>2015</value>
+   				</property>
+   			</bean>
+   		</property>
+   </bean>
+   
+  <!--  List example -->
+  <bean id="listdata" class="com.bridgelabz.model.ListData">
+  	<constructor-arg value="123"/>
+  	<constructor-arg value="Suji"/>
+  	<constructor-arg>
+  		<list>
+  			<value>Playing Cricket</value>
+  			<value>Reading books</value>
+  			<value>Watching movies...</value>
+  		</list>
+  	</constructor-arg>
+  </bean>
+  
+  <!-- Non String List -->
+  <bean id="non1" class="">
+  
+  </bean>
+ 
+</beans>

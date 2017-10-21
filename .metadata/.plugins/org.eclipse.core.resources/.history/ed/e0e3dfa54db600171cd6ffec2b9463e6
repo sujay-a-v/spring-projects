@@ -1,0 +1,18 @@
+package com.bridgelabz.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.bridgelabz.model.Car;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("factoryMethod.xml");
+		// using spring accessing the private constructor
+		Car c1=(Car) context.getBean("c");
+		Car c2=(Car) context.getBean("c");
+
+	}
+
+}

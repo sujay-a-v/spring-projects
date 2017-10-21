@@ -1,0 +1,9 @@
+package com.bridgelabz.model;
+
+public class NonString2 {
+	
+	private int id;
+	private String name;
+	private long mobile;
+
+}

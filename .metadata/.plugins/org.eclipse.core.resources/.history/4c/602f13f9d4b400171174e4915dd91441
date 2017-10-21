@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="drive" class="com.bridgelabz.model.PropertiesDI">
+   		<constructor-arg>
+   			<props>
+   				<prop key="driverclass">MysqlDriver</prop>
+   				<prop key="url">oracleurl</prop>
+   				<prop key="user">root</prop>
+   				<prop key="pass">root</prop>
+   			</props>
+   		</constructor-arg>
+   
+   </bean>
+   
+</beans>

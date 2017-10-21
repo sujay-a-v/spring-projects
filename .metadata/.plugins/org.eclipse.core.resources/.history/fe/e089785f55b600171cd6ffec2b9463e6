@@ -1,0 +1,5 @@
+package com.bridgelabz.model;
+
+public interface Car {
+
+}

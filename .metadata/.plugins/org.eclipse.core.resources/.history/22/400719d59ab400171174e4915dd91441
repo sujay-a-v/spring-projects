@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+   
+   <!-- <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="none">
+   		no need to call any primitive types 
+      </bean> -->
+      
+      <!-- <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="simple">
+   		 need to call the required primitive types 
+   		<property name="carname" value="Audi"></property>
+   		
+      </bean> -->
+      
+     <!--  <bean id="e" class="com.bridgelabz.model.EngineDependencyCheck"  >
+      </bean>
+      <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="objects">
+   		 need to call the required secondary  types 
+   		<property name="engine" ref="e"></property>
+   		
+      </bean> -->
+      
+       <bean id="e" class="com.bridgelabz.model.EngineDependencyCheck"  >
+       	<property name="model" value="2015"></property>
+      </bean>
+      <bean id="c" class="com.bridgelabz.model.CarDependencyCheck" dependency-check="objects">
+   		<!--  need to call the required primitive & secondary  types  -->
+   		<property name="carname" value="Audi"></property>
+   		<property name="engine" ref="e"></property>
+   		
+      </bean>
+      
+      <!-- dependency Check with @Require annotation -->
+      <!-- To activate the required Annotations -->
+      <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+      <bean id="dc" class="com.bridgelabz.model.ExpDependencyCheck">
+     <!--  <property name="driver" value="MySqlDriver"/>
+      <property name="url" value="MysqlURL"/>
+      <property name="user" value="root"/>
+      <property name="password" value="root"/> -->
+      
+      </bean>
+   
+</beans>   

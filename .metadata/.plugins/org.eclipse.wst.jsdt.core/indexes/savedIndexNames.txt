@@ -1,0 +1,12 @@
+INDEX VERSION 1.3+/home/bridgeit/Sujay/Sujay/Spring/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3503546383.index
+3082279661.index
+582715207.index
+3289868570.index
+3436609968.index
+4137666803.index
+3999898466.index
+3219804105.index
+2090272164.index
+1308422670.index
+1041200897.index

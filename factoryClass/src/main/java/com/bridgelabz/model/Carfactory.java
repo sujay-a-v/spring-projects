@@ -1,0 +1,18 @@
+package com.bridgelabz.model;
+
+public class Carfactory {
+	
+	private static String carname;
+	
+	public static void setCarname(String carname) {
+		Carfactory.carname = carname;
+	}
+	
+	//static factory approach
+	public static Car getInstance() throws InstantiationException, IllegalAccessException, ClassNotFoundException
+	{
+		Car c=(Car) Class.forName(carname).newInstance();
+		return c;
+	}
+
+}

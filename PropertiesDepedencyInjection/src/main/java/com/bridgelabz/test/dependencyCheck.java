@@ -1,0 +1,15 @@
+package com.bridgelabz.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.bridgelabz.model.CarDependencyCheck;
+
+public class dependencyCheck {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("dependencyCheck.xml");
+		CarDependencyCheck car=(CarDependencyCheck) context.getBean("c");
+		car.display();
+	}
+}

@@ -1,0 +1,18 @@
+package com.bridgelabz.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class CarAutowireAnnotation {
+	
+	private EngineAutoireAnnotation engine;
+	
+	@Autowired
+	public CarAutowireAnnotation(EngineAutoireAnnotation engine) {
+		this.engine=engine;
+	}
+
+	public void display()
+	{
+		System.out.println("car model : "+engine);
+	}
+}

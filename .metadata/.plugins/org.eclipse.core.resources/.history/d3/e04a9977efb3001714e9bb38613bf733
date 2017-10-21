@@ -1,0 +1,17 @@
+package com.bridgelabz.model;
+
+import java.util.Properties;
+
+public class PropertiesDI {
+	private Properties driver;
+	
+	public void setDriver(Properties driver) {
+		this.driver = driver;
+	}
+	
+	public void display()
+	{
+		
+	}
+
+}

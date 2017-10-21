@@ -1,0 +1,28 @@
+package com.bridgelabz.model;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class NonString1 {
+	
+	private int id;
+	private String name;
+	private List<NonString2> nonString2;
+	
+	public NonString1(int id, String name, List<NonString2> nonString2) {
+		this.id=id;
+		this.name=name;;
+		this.nonString2=nonString2;	
+	}
+	
+	public void display()
+	{
+		System.out.println(id+" \n"+name+" \n Friends are");
+		Iterator<NonString2> itr=nonString2.iterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}
+	}
+
+}

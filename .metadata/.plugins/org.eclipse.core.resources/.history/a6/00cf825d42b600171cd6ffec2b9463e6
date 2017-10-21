@@ -1,0 +1,11 @@
+package com.bridgelabz.model;
+
+public class Car {
+	
+	private static Car c;
+	
+	private car(){
+		System.out.println("Car object");
+	}
+
+}

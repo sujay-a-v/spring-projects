@@ -1,0 +1,18 @@
+package com.bridgelabz.model;
+
+public class Engine {
+	private String modalyear;
+
+	public String getModalyear() {
+		return modalyear;
+	}
+
+	public void setModalyear(String modalyear) {
+		this.modalyear = modalyear;
+	}
+	
+	public Engine() {
+		//System.out.println("Engine constructor");
+	}
+
+}
