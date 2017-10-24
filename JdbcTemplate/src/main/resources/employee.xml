@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+
+	<!-- DriverManagerDataSource is used to get the database informaion -->
+	<bean id="dataBase" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/MyCollegeApp"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	
+	<!-- JdbcTemplate used for datasource  -->
+	<bean id="jdbcTemplete" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataBase"></property>
+	</bean>
+	
+	<!-- Dao class connects to database -->
+	<bean id="eDao" class="com.bridgelabz.dao.EmployeeDao">
+		<property name="jdbcTemplate" ref="jdbcTemplete"></property>
+	</bean>
+	
+	<!-- Dao class connects to database using Prepared Statement -->
+	<bean id="psEdao" class="com.bridgelabz.dao.PreparedEmployeeDao">
+		<property name="jdbcTemplate" ref="jdbcTemplete"></property>
+	</bean>
+	
+	<!-- Using ResultSetExtract -->
+	<bean id="rsEdao" class="com.bridgelabz.dao.ResultSetEmployeeDao">
+		<property name="template" ref="jdbcTemplete"></property>
+	</bean>
+	
+	<!-- Using ROwMapping -->
+	<bean id="rowMap" class="com.bridgelabz.dao.RowMapperDao">
+		<property name="template" ref="jdbcTemplete"></property>
+	</bean>
+	
+	
+	<!-- NamedParameterJdbcTemplate -->
+	<bean id="namedParameter" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="dataBase"></constructor-arg>
+	</bean>
+	
+	<!-- Insert using NamedParameter -->
+	<bean id="named" class="com.bridgelabz.dao.NamedParameterDao">
+		<constructor-arg>
+			<ref bean="namedParameter"/>
+		</constructor-arg>
+	</bean>
+	
+	<!--  -->
+	<bean id="simple" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+		<constructor-arg ref="dataBase" />
+	</bean>
+	<bean id="simpleJdbc" class="com.bridgelabz.dao.SimpleJdbcDao">
+		<constructor-arg >
+			<ref bean="simple"/>
+		</constructor-arg>
+	</bean>
+
+</beans>
